@@ -31,8 +31,9 @@ pip install marshmallow-sqlalchemy
 Now install the db You can enter python via the console at the root and then:
 
 ```python
-from crudExample import DB
-DB.create_all()
+from crudExample import db
+db.create_all()
+exit()
 ```
 
 
