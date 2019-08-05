@@ -81,7 +81,19 @@ Search by all:
 
 ![step seven](images/get3.png)
 
+##Q&A
+* a. How do you typically manage dependencies for a project? 
+
+  * For Java I would use Maven, for Python we can use pipenv.
+
+* b. Provide a top 3 of your favorite resources (blogs, books, people, etc...) that you use to improve as an engineer. Please tell why you like that particular resource. 
+
+  * Googling various different topics regarding programming, e.g. browsing Stackoverflow. I find that you encounter many real-world examples from everyday people, presented in very different ways. It lets you see and think as others and see where and how they're making mistakes. 
+  * I have gotten some courses on sale from Udemy, which I felt were direct to the point and allowed me to begin learning other subject matters. Of course, a lot of these courses were reinforced with further research.
+  * I try to speak with as many people in the field as possible, and to ask what they are doing and how are they building their career. I think it's important to review what people 'ahead' of you are doing, because you can evaluate what they did to get there and if it's the best path for you to take. It also lets you get a 'personal' feeling for different areas of interest, when you are able to maintain personal relationships with engineers of various focuses. 
 
 
+ * c. How would you test a piece of code that required access to a remote database through a network connection?
+  * I would use both unit testing and selenium webdriver. 
 
 
