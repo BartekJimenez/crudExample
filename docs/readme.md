@@ -94,6 +94,6 @@ Search by all:
 
 
 * c. How would you test a piece of code that required access to a remote database through a network connection?
- * I would use both unit testing and selenium webdriver. 
+  * I would use both unit testing and selenium webdriver. 
 
 
