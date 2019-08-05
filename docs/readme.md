@@ -81,7 +81,7 @@ Search by all:
 
 ![step seven](images/get3.png)
 
-##Q&A
+## Q&A
 * a. How do you typically manage dependencies for a project? 
 
   * For Java I would use Maven, for Python we can use pipenv.
