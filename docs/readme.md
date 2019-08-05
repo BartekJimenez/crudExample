@@ -93,7 +93,7 @@ Search by all:
   * I try to speak with as many people in the field as possible, and to ask what they are doing and how are they building their career. I think it's important to review what people 'ahead' of you are doing, because you can evaluate what they did to get there and if it's the best path for you to take. It also lets you get a 'personal' feeling for different areas of interest, when you are able to maintain personal relationships with engineers of various focuses. 
 
 
- * c. How would you test a piece of code that required access to a remote database through a network connection?
-  * I would use both unit testing and selenium webdriver. 
+* c. How would you test a piece of code that required access to a remote database through a network connection?
+ * I would use both unit testing and selenium webdriver. 
 
 
