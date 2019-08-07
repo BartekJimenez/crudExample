@@ -12,12 +12,15 @@ git clone https://github.com/BartekJimenez/crudExample.git
 
 ## Setup
 
-Make sure you have the following python packages:
+Make sure you have the following python packages(most of these are included in Anaconda if you have that, if not all):
 - requests
 - flask
 - flask_sqlalchemy
 - flask_marshmallow
 - marshmallow-sqlalchemy
+- werkzeug
+- pandas
+- numpy
 
 pip commands for non-windows machines:
 ```bash
@@ -26,16 +29,18 @@ pip install flask
 pip install flask_sqlalchemy
 pip install flask_marshmallow
 pip install marshmallow-sqlalchemy
+pip install Werkzeug
+pip install pandas
+pip install numpy
 ```
 
-Now install the db You can enter python via the console at the root and then:
+Now to install the db. Just run this in your console:
 
-```python
-from crudExample import db
-db.create_all()
-exit()
+```bash
+python createDB.py
 ```
 
+It should run and create your database(sqlite) for you.
 
 ## Usage
 
@@ -50,36 +55,45 @@ python crudExample.py
 If your packages are all installed, you should be running the app. Get the url from the console, it should be : http://127.0.0.1:5000/
 
 
-## Example 1
+## Example of phase 1
 
-Post user Josh:
+All examples will be done via Postman
 
-![step one](images/post.png)
+Post user 558:
 
-Get all users:
+![step one](images/post-1-input.png)
 
-![step two](images/get.png)
+Afterwards, we add four more users the same way and then view them all via GET:
 
-Add another user Amanda:
+![step two](images/get-1-input.png)
 
-![step three](images/post2.png)
+We can also use PUT to edit the description(or any field we desire to edit):
 
-Update Josh's incorrect spelling in 'Australia':
+![step three](images/put-1-input.png)
 
-![step four](images/put.png) 
+We can also delete an entry via DELETE:
+
+![step four](images/delete-1-input.png)
+
+## Example of phase 2
+
+Now that we have some of the file meta-data, we can being uploading files:
+
+![step five](images/post-1-upload.png)
+
+What happens is, notice we upload our file 368.csv. The name of the file is the key, and it must match one of the entered meta-data sets otherwise it will not go through. We can now add more data, and GET it all:
+
+![step six](images/get-1-upload.png)
+
+What happened was that we sent the file via postman, and our application prased it and matched it up with our phase 1 entry. It then inputted that data into our phase 2 database, then removed the 'old' data from phase 1. We can see that simply by doing GET from the input endpoint:
 
 
-Delete Amanda:
+![step seven](images/get-2-input.png)
 
-![step five](images/delete.png)
+That is all! We can also get data with the key for both projects as show in the two screenshots below:
 
-Search by Josh's ID:
-
-![step six](images/get2.png)
-
-Search by all:
-
-![step seven](images/get3.png)
+![step eight-one](images/getspec-1-input.png)
+![step eight-two](images/getspec-1-upload.png)
 
 ## Q&A
 * a. How do you typically manage dependencies for a project? 
@@ -89,8 +103,8 @@ Search by all:
 * b. Provide a top 3 of your favorite resources (blogs, books, people, etc...) that you use to improve as an engineer. Please tell why you like that particular resource. 
 
   * Googling various different topics regarding programming, e.g. browsing Stackoverflow. I find that you encounter many real-world examples from everyday people, presented in very different ways. It lets you see and think as others and see where and how they're making mistakes. 
-  * I have gotten some courses on sale from Udemy, which I felt were direct to the point and allowed me to begin learning other subject matters. Of course, a lot of these courses were reinforced with further research.
-  * I try to speak with as many people in the field as possible, and to ask what they are doing and how are they building their career. I think it's important to review what people 'ahead' of you are doing, because you can evaluate what they did to get there and if it's the best path for you to take. It also lets you get a 'personal' feeling for different areas of interest, when you are able to maintain personal relationships with engineers of various focuses. 
+  * I have gotten some courses on sale from Udemy, which I felt were directly to the point and allowed me to begin learning other subject matters. Of course, a lot of these courses were reinforced with further research but Udemy gave me a good starting point.
+  * I try to speak with as many people in the field as possible, and I ask what they are doing and how are they are building their career. I think it's important to review what people 'ahead' of you are doing, because you can evaluate what they did to get there and if it's the best path for you to take. It also lets you get a 'personal' feeling for different areas of interest, on a much lower level.  
 
 
 * c. How would you test a piece of code that required access to a remote database through a network connection?
