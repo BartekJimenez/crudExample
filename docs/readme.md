@@ -57,17 +57,17 @@ If your packages are all installed, you should be running the app. Get the url f
 
 ## Example of phase 1
 
-All examples will be done via Postman
+All examples will be done via Postman.
 
 Post user 558:
 
 ![step one](images/post-1-input.png)
 
-Afterwards, we add four more users the same way and then view them all via GET:
+Afterwards, we can add three more users the same way and then view them all via GET:
 
 ![step two](images/get-1-input.png)
 
-We can also use PUT to edit the description(or any field we desire to edit):
+We can also use PUT to edit the description (or any field we desire to edit):
 
 ![step three](images/put-1-input.png)
 
@@ -77,15 +77,15 @@ We can also delete an entry via DELETE:
 
 ## Example of phase 2
 
-Now that we have some of the file meta-data, we can being uploading files:
+Now that we have some of the file meta-data, we can begin uploading files:
 
 ![step five](images/post-1-upload.png)
 
-What happens is, notice we upload our file 368.csv. The name of the file is the key, and it must match one of the entered meta-data sets otherwise it will not go through. We can now add more data, and GET it all:
+What's happening is that how notice we upload our file 368.csv? The name of the file is the key, and it must match one of the entered meta-data sets otherwise it will not go through. We can now add more data, and GET it all:
 
 ![step six](images/get-1-upload.png)
 
-What happened was that we sent the file via postman, and our application prased it and matched it up with our phase 1 entry. It then inputted that data into our phase 2 database, then removed the 'old' data from phase 1. We can see that simply by doing GET from the input endpoint:
+We sent the file via postman, and our application parsed and matched it up with our phase 1 entry via the key. It then inputted that data into our phase 2 database, and finally finished the operation by removing the 'old' data from phase 1. We can see that simply by doing GET from the input endpoint:
 
 
 ![step seven](images/get-2-input.png)
@@ -110,4 +110,7 @@ That is all! We can also get data with the key for both projects as show in the 
 * c. How would you test a piece of code that required access to a remote database through a network connection?
   * I would use both unit testing and selenium webdriver. 
 
+## TODOS
+
+Add validations and appropriate error handling. Perhaps revisit how data is parsed and see if you can make it more flexible and scalable. 
 
